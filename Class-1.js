@@ -30,7 +30,11 @@ p2.sayHello();
 
 console.log(p1 instanceof Person);
 console.log(p2 instanceof Person);
-
+// class 속성 추가
+Person.prototype.kg = 100; // property
+Person.prototype.run = function() {console.log(`${this.name}이 뜁니다.`);}; // method
+console.log(p1.kg);
+p1.run();
 
 // 무명 표현식
 const noNamed = class {
