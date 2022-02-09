@@ -29,10 +29,10 @@ console.log(Object.values(p1));
 console.log(Object.values(p2));
 console.log('----getPrototypeOf----');
 console.log(Object.getPrototypeOf(p1));
-console.log(Object.getPrototypeOf(p2));    // 객체 내부의 Prototype 속성값을 확인. // {eat, run, rest}
+console.log(Object.getPrototypeOf(p2));    // 객체 내부의 Prototype 객체의 method 확인. // {eat, run, rest}
 console.log(Object.keys(Object.getPrototypeOf(p2)));    // []
 console.log('----getOwnPropertyNames----');
 console.log(Object.getOwnPropertyNames(p1));    // [eat, run, rest]
-console.log(Object.getOwnPropertyNames(p2));    // [name, age]
+console.log(Object.getOwnPropertyNames(p2));    // 객체의 모든 속성을 배열로 반환한다. // [name, age]
 console.log(Object.getOwnPropertyNames(Object.getPrototypeOf(p2)));    // [constructor, eat, run, rest]
 console.log(Object.getOwnPropertyNames(Person2.prototype));    // [constructor, eat, run, rest]
