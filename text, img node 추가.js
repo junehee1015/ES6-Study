@@ -23,7 +23,7 @@ window.onload = () => { // script 파일이 load가 되어졌을 때 실행
     p_node.appendChild(p_text_node);
     // 3-2. body와 붙이기
     document.body.appendChild(p_node);
-}
+};
 
 
 // Image Node
@@ -41,7 +41,7 @@ window.onload = () => {
     img_node1.height = 300;
     // 3. body에 붙이기
     document.body.appendChild(img_node1);
-}
+};
 
 // 속성 추가 방식 (2) setAttribute()
 // -> 장점으로는 사용자 정의 속성을 직접 만들어서 추가할 수 있다.
@@ -55,7 +55,7 @@ window.onload = () => {
     img_node2.setAttribute('addProperty', 'img1');
 
     document.body.appendChild(img_node2);
-}
+};
 
 
 
