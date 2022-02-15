@@ -57,14 +57,16 @@ window.onload = () => {
 // 문자열 요소로 li 요소 삭제하기
 window.onload = () => {
     function removeElement(text) {
-        const li = document.querySelectorAll('li');
+        const li = document.querySelectorAll('li'); // querySelectorAll은 NodeList 이다.
+        // 모든 li 선택
         li.forEach(value => {
+            // 전달받은 text와 비교하여 대상 찾기
             if(value.innerText == text) {
+                // 삭제 할 요소 찾기
                 value.parentNode.removeChild(value);
             }
         });
-        
-        
+            
     }
     document.querySelector('#memDelBtn').addEventListener('click', () => {
         removeElement('아무개');
