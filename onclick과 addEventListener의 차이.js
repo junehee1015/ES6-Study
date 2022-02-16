@@ -22,3 +22,19 @@
 
 // 구버전 브라우저 지원 등 호환성을 고려해야 한다면 -> onclick
 // 아니면 addEventListener
+
+window.onload = () => {
+    const div = document.querySelector('#div_btn');
+    const p = document.querySelector('#p_btn');
+
+    div.addEventListener('click', () => {
+        alert('div click');
+    });
+    
+    p.addEventListener('click', () => {
+        alert('p click');
+        event.stopPropagation();
+    });
+    // p tag를 click하면 버블링 때문에 div의 event도 실행된다.
+    // 하지만 event.stopPropagation method를 사용하면 버블링되지 않는다.
+}
